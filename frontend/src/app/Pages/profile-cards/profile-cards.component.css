@@ -1,0 +1,52 @@
+.body-content{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0 0 2rem;
+}
+
+.card-blog{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 5px;
+}
+
+.card-blog-content{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-blog-img{
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+    justify-content: center;
+}
+
+.card-blog-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-blog-text-content{
+    margin-top: 10px;
+    width: 80vw;
+    text-align: justify;
+}
+
+/*.card-blog-comment{
+    display: flex;
+    max-width: 1000px;
+}*/
+
+.card-blog-comment-section{
+    display: flex;
+    width: 30px;
+}
+
+.card-blog-text h4{
+    margin: 0
+}
+

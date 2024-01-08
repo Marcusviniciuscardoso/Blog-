@@ -1,0 +1,97 @@
+<app-header-comp></app-header-comp>
+<form (ngSubmit)="postCard()" action="/upload" method="post" enctype="multipart/form-data"> 
+  <!--
+    <div class="container-options">
+      <div class="options-button-addbricks">
+  <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Add item<svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+  </svg></button>
+  <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+      <li>
+        <button (click)="addImg()" type="button" class="w-full block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Add image</button>
+      </li>
+      <li>
+        <button (click)="addText()" type="button" class="w-full block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Add text</button>
+      </li>
+    </ul>
+  </div>
+</div>
+</div> 
+-->
+    <div class="options-button-save-cancel ml-2 mt-2">
+      <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Save</button>
+      <button type="button" (click)="getHome()" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Cancel</button>
+    </div>
+  <div class="container-topic">
+    <div class="topic-imagem">
+        <label [ngStyle]="{'color': 'white', 'fontSize': '30px'}">Insert image</label>
+        <input type="file" name="featuredimage" (change)="readURL($event)" accept="image/*" />
+        <div *ngIf="imageSrc">
+          <img [src]="imageSrc" alt="Preview" />
+        </div>
+<!--<div class="flex items-center justify-center w-full">
+  <label for="dropzone-file" *ngIf="imageSrc === ''" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+      <div class="flex flex-col items-center justify-center pt-5 pb-6">
+          <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+          </svg>
+          <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+        </div>
+        <input id="dropzone-file" (change)="readURL($event)" accept="image/*" type="file" class="hidden" />
+  </label>
+      <div *ngIf="imageSrc !== ''" class="flex flex-col items-center justify-center pt-5 pb-6">
+        <ng-container *ngFor="let firstUrl of urls">
+          <img *ngIf="firstUrl.id === 1" [src]="firstUrl.image" class="object-cover">
+        </ng-container>
+      </div>
+</div> -->
+    </div>
+    <div class="topic-titulo">
+        <label [ngStyle]="{'color': 'white', 'fontSize': '30px'}">Insert title</label>
+        <input type="text" class="input-topic" [(ngModel)]="formdata.title" [ngModelOptions]="{standalone: true}" placeholder="Insert title here" />
+    </div>
+    <div class="topic-subtitulo">
+        <label [ngStyle]="{'color': 'white', 'fontSize': '30px'}">Insert subtitle</label>
+        <input type="text" class="input-topic" [(ngModel)]="formdata.subtitle" [ngModelOptions]="{standalone: true}" placeholder="Insira subtitulo aqui" />
+    </div>
+      <div class="topic-texto mb-12">
+          <label [ngStyle]="{'color': 'white', 'fontSize': '30px'}">Insert text</label>
+          <textarea [(ngModel)]="formdata.text" class="input-topic" [ngModelOptions]="{standalone: true}" placeholder="Insira texto aqui" ></textarea>
+      </div>
+      <!--
+        <ng-container *ngFor="let value of values">
+            <div *ngIf="value == '1'; else textos" class="topic-imagem mb-12">
+                <label [ngStyle]="{'color': 'white', 'fontSize': '30px'}">Insert image</label>
+                <div class="flex items-center justify-center w-full">
+                  <label *ngIf="imageSrc === ''" for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                      <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                        <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                        </svg>
+                          <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                          <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                      </div>
+                      <input (change)="readURL($event)" type="file" class="hidden"/>
+                  </label>
+                  <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                    <ng-container *ngFor="let index of imgIndex ">
+                      <ng-container *ngFor="let url of urls">
+                        <img *ngIf="url.id === index" [src]="url.image" class="object-cover">
+                      </ng-container>
+                    </ng-container>
+                  </div>
+                </div>             
+            </div>
+              <ng-template #textos>
+                <div class="topic-texto">
+                    <label [ngStyle]="{'color': 'white', 'fontSize': '30px'}">Insert post text</label>
+                    <textarea [(ngModel)]="text" class="input-topic" [ngModelOptions]="{standalone: true}" placeholder="Insert text here" ></textarea>
+                </div>
+              </ng-template>
+            </ng-container>
+      -->
+  </div>
+  <app-footer-comp></app-footer-comp>
+</form>

@@ -1,0 +1,28 @@
+<div class="card-header">
+    <div class="card-header-content">
+        <div class="card-logo-img">
+            <img [ngStyle]="{'width': '50%'}" src="../../../assets/images/loremIpsumpng.png">
+        </div>
+        <div class="card-header-list">
+            <a routerLink="/">Home</a>
+            <a routerLink="/createTopic">Create Topic</a>
+            <a routerLink="/signUpp">Sign up</a>
+            <a routerLink="/signIn">Sign in</a>
+        </div>
+        <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer" *ngIf="profile?.avatar" src="http://localhost:3333/static/images/uploads/{{profile.avatar}}" alt="User dropdown">
+        <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer" *ngIf="!profile?.avatar" src="https://t4.ftcdn.net/jpg/04/08/24/43/360_F_408244382_Ex6k7k8XYzTbiXLNJgIL8gssebpLLBZQ.jpg" alt="User dropdown">
+<div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+    <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+      <div class="font-medium truncate">{{profile.name}} {{profile.surname}}</div>
+    </div>
+    <ul class="py-2 text-sm text-gray-200 dark:text-gray-200" aria-labelledby="avatarButton">
+      <li>
+        <button (click)="profileInfo()" class="text-black w-full block py-1 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">See profile</button>
+      </li>
+    </ul>
+    <div class="py-1">
+      <button (click)="anularToken()" href="#" class="w-full block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</button>
+    </div>
+</div>
+    </div>
+</div>

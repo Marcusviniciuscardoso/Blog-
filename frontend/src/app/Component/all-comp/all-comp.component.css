@@ -1,0 +1,25 @@
+.container-tags{
+    display: grid;
+    grid-template-areas: 
+    "app-header-comp app-header-comp app-header-comp"
+    "app-body-comp app-body-comp app-body-comp"
+    "app-footer-comp app-footer-comp app-footer-comp";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+app-header-comp{
+    grid-area: app-header-comp;
+}
+
+app-body-comp{
+    grid-area: app-body-comp;
+}
+
+app-footer-comp{
+    /*position: absolute;
+    bottom: 0;*/
+    grid-area: app-footer-comp;
+    width: 100%;
+    background-color: blue;
+}

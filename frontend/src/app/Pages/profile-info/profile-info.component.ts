@@ -68,4 +68,9 @@ export class ProfileInfoComponent {
       console.log("Olha os profiles: ", perfils)
     })
   }
+
+  getHome(){
+    localStorage.setItem("reloadHome", "1")
+    this.router.navigate([`/`])
+  }
 }

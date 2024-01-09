@@ -58,10 +58,10 @@ export class SignInComponent implements OnInit {
       this.signInService.postCreds(credsData).subscribe(
         (response) => {
           this.creds = response
-          // Limpar campos após o registro bem-sucedido
           this.username = '';
           this.userpassword = '',
           localStorage.getItem('token')
+          localStorage.setItem("reloadProfileInfo", "1")
           this.getCreds()
           console.log("Olha o postcreds")
           console.log("Olha o idprofile: ", localStorage.getItem('idProfile'))

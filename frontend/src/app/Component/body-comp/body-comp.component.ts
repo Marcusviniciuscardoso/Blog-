@@ -12,9 +12,6 @@ import { CardLandingPage } from 'src/app/model/cardLandingPage';
 export class BodyCompComponent implements OnInit {
    searchInput: string = ''
 
-   
-   url = 'http://localhost:3000/cards'; // api rest fake
-   
    card = {} as Cards 
    cardHome = {} as CardsHome
    cards: CardLandingPage[]

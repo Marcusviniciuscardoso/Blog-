@@ -91,7 +91,7 @@ export class EditProfileComponent {
     this.profileinfoservice.updateProfile(formData).subscribe((editprofile: editProfile[]) => {
       this.editProfiles = editprofile;
     });
-    localStorage.setItem("reloadProfileInfo", "2")
+    localStorage.setItem("reloadProfileInfo", "1")
     this.router.navigate([`/profileInfo/${this.localId}`])
   }
 }

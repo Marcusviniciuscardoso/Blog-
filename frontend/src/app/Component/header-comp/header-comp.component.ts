@@ -33,7 +33,6 @@ export class HeaderCompComponent {
     this.profileinfoservice.getProfile(String(localStorage.getItem('idProfile'))).subscribe((perfils: signUp[]) =>{
       if (perfils.length > 0) {
         this.profile = perfils[0];
-        console.log("perfil: ", this.profile.avatar);
       }
     });
   }

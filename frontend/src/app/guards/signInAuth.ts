@@ -10,16 +10,12 @@ export class signInAuth implements CanActivate {
         next: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ): boolean {
-        console.log('CanActivateChild called');
         const auth = localStorage.getItem('auth');
                 
         if (!auth) {
-            console.log("Deu não")
             return false
         } else {
             const idProfile = localStorage.getItem('idProfile')
-            console.log("navegar para topic")
-            console.log("idProfilee", idProfile)
             this.router.navigate([`/profile/${idProfile}`])
             return true;
         }

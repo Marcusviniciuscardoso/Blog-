@@ -5,7 +5,6 @@ const { v4: uuidv4 } = require('uuid')
 
 const validationBody = (req, res, next) => {
   const { body } = req
-  console.log('olha o nosso body: ', req.body)
   try {
     const requiredFields = ['name', 'surname', 'dateofbirth']
     for (const field of requiredFields) {
@@ -22,8 +21,6 @@ const validationBody = (req, res, next) => {
 
 signUpRouter.post('/signUp', validationBody, async (req, res, next) => {
   try {
-    console.log('** Received data: **', req.body)
-
     if (!req.files || !req.files.avatar) {
       return res.status(400).json({ message: 'No file uploaded' })
     }

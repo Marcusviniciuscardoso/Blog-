@@ -23,8 +23,6 @@ const validationBody = (req, res, next) => {
 
 createTopicRouter.post('/createTopic', validationBody, async (req, res, next) => {
   try {
-    console.log('** Received data create topic: **', req.body)
-
     if (!req.files || !req.files.featuredimage) {
       return res.status(400).json({ message: 'No file uploaded' })
     }

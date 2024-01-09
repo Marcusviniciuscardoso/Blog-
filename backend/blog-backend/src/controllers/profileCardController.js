@@ -8,7 +8,6 @@ const getProfileCards = async (req, res) => {
 
 const deleteProfileCards = async (req, res) => {
   const { id, cardId } = req.params
-  console.log('id and cardId', id, cardId)
   const profileCards = await profileCardsModel.deleteProfileCards(id, cardId)
   return res.status(200).json(profileCards)
 }

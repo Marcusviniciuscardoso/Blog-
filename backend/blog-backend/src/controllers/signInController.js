@@ -7,8 +7,6 @@ const postCreds = async (request, response) => {
 
 const getCredsProfile = async (request, response) => {
   const idCredentials = request.user.idcredentials
-  console.log(request.user)
-  console.log('tá passando aqui ?')
   const idProfile = await signIn.getCredsProfile(idCredentials)
   return response.json({ credentials: idCredentials, data: 'Informações confidenciais', idprofile: idProfile })
 }

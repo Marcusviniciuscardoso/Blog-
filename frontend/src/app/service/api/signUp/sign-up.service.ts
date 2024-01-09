@@ -20,7 +20,6 @@ export class SignUpService {
   }
 
   postProfile(formData: FormData): Observable<signUp[]> {
-    console.log('Informações do formdata: ', formData);
 
     return this.httpclient.post<signUp[]>(this.httpSignUp, formData).pipe(
       catchError(this.handleError)

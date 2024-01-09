@@ -3,7 +3,6 @@ const connection = require('./connection')
 const getProfileInfo = async (idcredentials) => {
   try {
     const idProfileNumber = parseInt(idcredentials, 10) // Convertendo para número
-    console.log('olha o id de getprofileinfo: ', idProfileNumber)
 
     const profile = await connection.query('SELECT * FROM profile WHERE profile.idprofile = $1', [idProfileNumber])
     return profile.rows
@@ -15,7 +14,6 @@ const getProfileInfo = async (idcredentials) => {
 const updateProfileInfo = async (data, files) => {
   try {
     const avatar = files
-    console.log('avatar profile controller: ', avatar)
     const { idprofile, name, surname, dateofbirth } = data
 
     const idProfileNumber = parseInt(idprofile, 10) // Convertendo para número
@@ -39,11 +37,9 @@ const updateProfileInfo = async (data, files) => {
       query += `
          WHERE idprofile = $1`
     }
-    console.log('Olha o query: ', query)
 
     const profile = await connection.query(query, values)
 
-    console.log('Rows de profileInfo no update: ', profile.rows)
     return profile.rows
   } catch (error) {
     console.error('Error after updating information from profile: ', error)

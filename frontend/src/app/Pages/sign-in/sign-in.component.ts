@@ -44,7 +44,6 @@ export class SignInComponent implements OnInit {
     getCreds() {
        this.signInService.getCreds().subscribe((creds: creden[]) => {
         this.creds = creds;
-        console.log("opaa", this.creds)
       });
     }
     
@@ -63,14 +62,11 @@ export class SignInComponent implements OnInit {
           localStorage.getItem('token')
           localStorage.setItem("reloadProfileInfo", "1")
           this.getCreds()
-          console.log("Olha o postcreds")
-          console.log("Olha o idprofile: ", localStorage.getItem('idProfile'))
         },
         (error => {
           if (error.status === 400) {
             // Email já está em uso, exiba uma mensagem de erro
             this.errorMessage = error.error.message;
-            console.log(this.errorMessage)
           } else {
             // Outro erro, lide com ele de acordo
             console.error(error);

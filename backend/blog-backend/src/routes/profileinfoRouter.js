@@ -23,11 +23,8 @@ const validationBody = (req, res, next) => {
 profileInfoRouter.get('/profileInfo/:id', profileInfoController.getProfileInfo)
 profileInfoRouter.put('/profileInfo', validationBody, async (req, res, next) => {
   try {
-    console.log('** Received data: **', req.body)
-
     if (!req.files || !req.files.avatar || req.files.avatar === null) {
       req.body.avatar = null
-      console.log('O avatar é null')
       next()
       // return res.status(400).json({ message: 'No file uploaded' });
     } else {
@@ -42,7 +39,6 @@ profileInfoRouter.put('/profileInfo', validationBody, async (req, res, next) => 
         }
 
         req.files.avatar = nome
-        console.log('Salvou o nome da image: ', nome)
         next()
       })
     }

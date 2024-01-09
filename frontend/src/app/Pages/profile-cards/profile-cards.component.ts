@@ -68,7 +68,6 @@ export class ProfileCardsComponent {
     })
     this.getComment()
     this.getProfile()
-    console.log("rota id: ", this.localId)
   }
 
   ngOnDestroy(){
@@ -78,14 +77,12 @@ export class ProfileCardsComponent {
   getCards() {
       this.profileinfoservice.getCardsProfile().subscribe((cards: CardsHome[]) => {
       this.cards = cards
-      console.log("aquiiiii",this.cards)
     })
   }
 
   getComment(){
       this.commentservice.getComment(String(this.localId)).subscribe((comments: comments[])=>{
       this.comments = comments
-      console.log("comentários: ", this.comments)
       this.commentslength = this.comments.length
     })
   }
@@ -93,7 +90,6 @@ export class ProfileCardsComponent {
   getProfile(){
     this.commentservice.getProfileComment().subscribe((perfils: signUp[]) =>{
       this.profiles = perfils
-      console.log("Olha os profiles: ", perfils)
     })}
 
   postComment(){
@@ -109,10 +105,6 @@ export class ProfileCardsComponent {
       formData.append('cardid', this.formdata.cardid.toString())
       formData.append('commentdate', this.formdata.commentdate.toString())
       
-      formData.forEach((value: BlobPart, key: string) => {
-        console.log("aquiiii: ", key, value);
-      });
-      console.log("Chegou aqui");
       this.commentservice.postComment(formData).subscribe((cards: comments[]) => {
         this.comments = cards;
       })

@@ -30,7 +30,6 @@ export class SignUpComponent {
   
   onFileSelected(event: any) {
     const file = event.target.files[0];
-    console.log("olha o file: ", file)
     if (file) {
       this.formdata.avatar = file
       this.previewImage = null
@@ -57,10 +56,6 @@ export class SignUpComponent {
       formData.append('avatar', this.formdata.avatar);
     }
     
-    formData.forEach((value: BlobPart, key: string) => {
-      console.log("aquiiii: ", key, value);
-    });
-    console.log("Chegou aqui");
     this.signUpService.postProfile(formData).subscribe((profile: signUp[]) => {
       this.profiles = profile;
     });

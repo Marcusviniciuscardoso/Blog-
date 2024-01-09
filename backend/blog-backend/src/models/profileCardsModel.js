@@ -17,7 +17,6 @@ const getProfileCards = async (id) => {
 
 const deleteProfileCards = async (id, cardId) => {
   try {
-    console.log('id: ', id)
     const query = `
         DELETE FROM cards
         WHERE profileid = $1 AND idcard = $2

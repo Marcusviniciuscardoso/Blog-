@@ -24,7 +24,6 @@ export class CardService {
   }
  
   getCards():Observable<CardLandingPage[]> {
-    console.log("procurando")
     return this.httpClient.get<CardLandingPage[]>(this.httpCardLandingPage)
   }
 

@@ -20,7 +20,6 @@ export class ProfileInfoService {
   }
 
   updateProfile(formdata: FormData): Observable<editProfile[]>{
-    console.log("Chegou em updateProfile: ", formdata)
     return this.httpclient.put<editProfile[]>(this.httpProfileInfo, formdata)
   }
 

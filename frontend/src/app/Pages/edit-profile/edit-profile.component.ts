@@ -47,7 +47,6 @@ export class EditProfileComponent {
 
   onFileSelected(event: any) {
     const file = event.target.files[0];
-    console.log("olha o file: ", file)
     if (file) {
       this.formdata.avatar = file
       this.previewImage = null
@@ -68,10 +67,7 @@ export class EditProfileComponent {
     this.profileinfoservice.getProfile(String(this.localId)).subscribe((perfils: signUp[]) => {
       if (perfils.length > 0) {
         this.profile = perfils[0];
-        console.log("perfil: ", this.profile.avatar);
         this.previewImage = `http://localhost:3333/static/images/uploads/${this.profile.avatar}`
-        console.log("previewImage: ", this.previewImage)
-        console.log("avatar: ", this.profile.avatar)
       }
     });
   }

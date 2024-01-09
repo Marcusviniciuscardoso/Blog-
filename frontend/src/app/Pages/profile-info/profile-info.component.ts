@@ -45,7 +45,6 @@ export class ProfileInfoComponent {
     this.getCards()
     this.routeSub = this.route.params.subscribe(params =>{
       this.localId = Number(params["id"])
-      console.log("Olha o localid do getcards: ", this.localId)
     })
     this.getProfile()
     const reload = localStorage.getItem('reloadProfileInfo')
@@ -65,7 +64,6 @@ export class ProfileInfoComponent {
   getProfile(){
     this.profileinfoservice.getProfile(String(this.localId)).subscribe((perfils: signUp[]) =>{
       this.profiles = perfils
-      console.log("Olha os profiles: ", perfils)
     })
   }
 

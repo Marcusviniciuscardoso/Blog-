@@ -6,7 +6,6 @@ const getComment = async (id) => {
   INNER JOIN profile ON commentssection.profileid = profile.idprofile
   WHERE commentssection.cardid = $1`
   const comment = await connection.query(query, [id])
-  console.log(comment.rows)
   return comment.rows
 }
 
@@ -18,7 +17,6 @@ const getProfileComment = async () => {
 
 const postComment = async (data) => {
   const { comment, likes, dislikes, profileid, cardid, commentdate } = data
-  console.log('Olha o postComment aqui: ', data)
   const query = `INSERT INTO commentssection (comment, likes, dislikes, profileid, cardid, commentdate) 
                  VALUES ($1, $2, $3, $4, $5, $6)`
   const comments = await connection.query(query, [comment, likes, dislikes, profileid, cardid, commentdate])

@@ -10,7 +10,6 @@ const postCards = async (data, file) => {
     RETURNING idcard
     `
     const cards = await connection.query(query, [title, subtitle, creationdate, profileid, featuredimage])
-    console.log('olha o rows: ', cards.rows)
     return cards.rows
   } catch (error) {
     console.error('Error to posting card:', error)

@@ -81,7 +81,6 @@ export class CreateTopicComponent {
       const formData = new FormData();
       this.formdata.profileid = Number(localStorage.getItem('idProfile'))
       this.formdata.creationdate = this.formatDate(new Date())
-      console.log("olha aqui o date: ", this.formdata.creationdate)
       formData.append('idcard', this.formdata.idcard.toString())
       formData.append('title', this.formdata.title || '')
       formData.append('subtitle', this.formdata.subtitle || '')
@@ -92,10 +91,6 @@ export class CreateTopicComponent {
         formData.append('featuredimage', this.formdata.featuredimage);
       }
       
-      formData.forEach((value: BlobPart, key: string) => {
-        console.log("aquiiii: ", key, value);
-      });
-      console.log("Chegou aqui");
       this.createtopicservice.postCard(formData).subscribe((cards: CardLandingPage[]) => {
         this.cards = cards;
       });

@@ -12,7 +12,6 @@ const validationBody = (req, res, next) => {
   const { body } = req
   try {
     const requiredFields = ['username', 'userpassword']
-    console.log('campos')
     for (const field of requiredFields) {
       if (body[field] === undefined || body[field] === '') {
         return res.status(400).json({ message: `${field} undefined` })
@@ -34,10 +33,8 @@ const validationCreds = async (req, res, next) => {
       return res.status(400).json({ message: 'Invalid user or password' })
     } else {
       const id = credsConfirm.rows[0].idcredentials
-      console.log('É o id: ', id)
       const token = await createToken(id)
       const decoded = jwt.verify(token, secret)
-      console.log('oww yeah', decoded)
       next()
       return res.json({ auth: true, token, credsConfirm })
     }
@@ -60,13 +57,11 @@ const createToken = async (id) => {
 
 const authenticateToken = (req, res, next) => {
   const token = req.headers.authorization.split(' ')[1]
-  console.log(token)
   if (!token) {
     return res.status(401).json({ error: 'Not any token' })
   }
 
   const payload = jwt.verify(token, secret)
-  console.log(payload)
   if (payload.exp < Date.now() / 1000) {
     return res.status(401).json({ error: 'Token expired' })
   }
@@ -75,7 +70,6 @@ const authenticateToken = (req, res, next) => {
     if (err) {
       return res.status(403).json({ error: 'Failure checking token' })
     }
-    console.log('token verificado: ', user)
     req.user = user
     next()
   })

@@ -20,8 +20,7 @@ export class BodyCompComponent implements OnInit {
    
    handleChange(event: any){
      this.searchInput = event.target.value
-     console.log("evento", this.searchInput)
-     console.log("filtro", this.getFilteredCards())
+     
    }
 
    
@@ -49,7 +48,6 @@ export class BodyCompComponent implements OnInit {
         this.cards = cards
         this.cardss = cards
       });
-      console.log("Ó os cards: ", this.cards)
     }
 
     /*novoCard() {

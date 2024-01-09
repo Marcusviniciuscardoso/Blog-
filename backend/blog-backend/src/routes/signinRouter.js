@@ -34,7 +34,7 @@ const validationCreds = async (req, res, next) => {
     } else {
       const id = credsConfirm.rows[0].idcredentials
       const token = await createToken(id)
-      const decoded = jwt.verify(token, secret)
+      jwt.verify(token, secret)
       next()
       return res.json({ auth: true, token, credsConfirm })
     }

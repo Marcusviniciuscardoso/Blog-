@@ -30,9 +30,9 @@ export class HeaderCompComponent {
   }
 
   getProfile(){
-    this.profileinfoservice.getProfile(String(localStorage.getItem('idProfile'))).subscribe((perfils: signUp[]) =>{
-      if (perfils.length > 0) {
-        this.profile = perfils[0];
+    this.profileinfoservice.getProfile(String(localStorage.getItem('idProfile'))).subscribe((profiles: signUp[]) =>{
+      if (profiles.length > 0) {
+        this.profile = profiles[0];
       }
     });
   }

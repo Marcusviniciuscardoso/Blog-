@@ -54,11 +54,11 @@
     </div>
     <div class="topic-subtitulo">
         <label [ngStyle]="{'color': 'white', 'fontSize': '30px'}">Insert subtitle</label>
-        <input type="text" class="input-topic" [(ngModel)]="formdata.subtitle" [ngModelOptions]="{standalone: true}" placeholder="Insira subtitulo aqui" />
+        <input type="text" class="input-topic" [(ngModel)]="formdata.subtitle" [ngModelOptions]="{standalone: true}" placeholder="Insert subtitle here" />
     </div>
       <div class="topic-texto mb-12">
           <label [ngStyle]="{'color': 'white', 'fontSize': '30px'}">Insert text</label>
-          <textarea [(ngModel)]="formdata.text" class="input-topic" [ngModelOptions]="{standalone: true}" placeholder="Insira texto aqui" ></textarea>
+          <textarea [(ngModel)]="formdata.text" (input)="auto_grow($event)" class="topic-text-textarea" [ngModelOptions]="{standalone: true}" placeholder="Insert text here" ></textarea>
       </div>
       <!--
         <ng-container *ngFor="let value of values">

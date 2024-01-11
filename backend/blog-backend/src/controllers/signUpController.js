@@ -12,10 +12,10 @@ const combinedController = async (req, res) => {
       return res.status(400).json({ message: 'No files' })
     }
     await signUpModel.postCreds(req.body)
-    const perfil = await signUpModel.postPerfil(req.body, req.files.avatar)
+    const profile = await signUpModel.postProfile(req.body, req.files.avatar)
 
-    if (perfil && perfil.length > 0) {
-      res.status(200).json(perfil)
+    if (profile && profile.length > 0) {
+      res.status(200).json(profile)
     } else {
       res.status(400).json({ message: 'Failed to create profile' })
     }

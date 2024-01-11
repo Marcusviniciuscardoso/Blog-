@@ -8,9 +8,9 @@
 <div class="body-content">
     <ng-container *ngIf="searchInput === ''; else select">
           <div class="card-blog" *ngFor="let card of cards">  
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="h-[450px] w-[500px] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="/profileCards/{{card.idcard}}">
-        <img class="rounded-t-lg" src="http://localhost:3333/static/images/uploads/{{card.featuredimage}}" alt="" />
+        <img class="h-[200px] w-full rounded-t-lg" src="http://localhost:3333/static/images/uploads/{{card.featuredimage}}" alt="" />
     </a>
     <div class="p-5">
         <a href="/profileCards/{{card.idcard}}">

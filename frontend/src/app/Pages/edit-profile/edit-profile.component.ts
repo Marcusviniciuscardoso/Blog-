@@ -64,9 +64,9 @@ export class EditProfileComponent {
   }
 
   getProfile() {
-    this.profileinfoservice.getProfile(String(this.localId)).subscribe((perfils: signUp[]) => {
-      if (perfils.length > 0) {
-        this.profile = perfils[0];
+    this.profileinfoservice.getProfile(String(this.localId)).subscribe((profiles: signUp[]) => {
+      if (profiles.length > 0) {
+        this.profile = profiles[0];
         this.previewImage = `http://localhost:3333/static/images/uploads/${this.profile.avatar}`
       }
     });

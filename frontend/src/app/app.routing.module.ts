@@ -8,7 +8,6 @@ import { ProfileCardsComponent } from './Pages/profile-cards/profile-cards.compo
 import { ProfileInfoComponent } from './Pages/profile-info/profile-info.component';
 import { ProfileGuard } from './guards/profileGuard';
 import { EditProfileComponent } from './Pages/edit-profile/edit-profile.component';
-import { WelcomePageComponent } from './Pages/welcome-page/welcome-page.component';
 
 
 const routes: Routes = [
@@ -26,7 +25,6 @@ const routes: Routes = [
     {path: 'editProfile/:id', component: EditProfileComponent, canActivate: [ProfileGuard]},
     {path: 'createTopic', component: CreateTopicComponent, canActivate: [ProfileGuard]},
     {path: 'signUpp', component: SignUpComponent},
-    {path: 'welcomePage', component: WelcomePageComponent}
   ]
 
 @NgModule({

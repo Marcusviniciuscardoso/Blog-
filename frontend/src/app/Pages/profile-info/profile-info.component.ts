@@ -62,8 +62,8 @@ export class ProfileInfoComponent {
   }
 
   getProfile(){
-    this.profileinfoservice.getProfile(String(this.localId)).subscribe((perfils: signUp[]) =>{
-      this.profiles = perfils
+    this.profileinfoservice.getProfile(String(this.localId)).subscribe((profiles: signUp[]) =>{
+      this.profiles = profiles
     })
   }
 

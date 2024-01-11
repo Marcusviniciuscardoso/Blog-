@@ -46,6 +46,7 @@ export class BodyCompComponent implements OnInit {
     getCards() {
       this.cardService.getCards().subscribe((cards: CardLandingPage[]) => {
         this.cards = cards
+        this.cards.reverse()
         this.cardss = cards
       });
     }

@@ -4,7 +4,7 @@ const getAll = async () => {
     const tasks = await connection.query('SELECT * FROM credentials')
     return tasks.rows
   } catch (error) {
-    console.error('Erro ao inserir perfil:', error)
+    console.error('Error inserting profile:', error)
     throw error
   }
 }

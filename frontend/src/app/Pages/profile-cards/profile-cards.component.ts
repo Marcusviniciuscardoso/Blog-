@@ -88,8 +88,8 @@ export class ProfileCardsComponent {
   }
 
   getProfile(){
-    this.commentservice.getProfileComment().subscribe((perfils: signUp[]) =>{
-      this.profiles = perfils
+    this.commentservice.getProfileComment().subscribe((profiles: signUp[]) =>{
+      this.profiles = profiles
     })}
 
   postComment(){

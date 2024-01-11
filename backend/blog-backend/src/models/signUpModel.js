@@ -23,7 +23,7 @@ const postCreds = async (data) => {
   }
 }
 
-const postPerfil = async (data1, file) => {
+const postProfile = async (data1, file) => {
   try {
     const { name, surname, email, dateofbirth } = data1
     const avatar = file
@@ -32,9 +32,9 @@ const postPerfil = async (data1, file) => {
     const credentialId = creds.rows[0].idcredentials
 
     const query = 'INSERT INTO profile (name, surname, dateofbirth, avatar, credentialid) VALUES ($1, $2, $3, $4, $5) RETURNING *'
-    const perfil = await connection.query(query, [name, surname, dateofbirth, avatar, credentialId])
+    const profile = await connection.query(query, [name, surname, dateofbirth, avatar, credentialId])
 
-    return perfil.rows
+    return profile.rows
   } catch (error) {
     console.error('Error entering profile:', error)
     throw error
@@ -42,6 +42,6 @@ const postPerfil = async (data1, file) => {
 }
 
 module.exports = {
-  postPerfil,
+  postProfile,
   postCreds
 }

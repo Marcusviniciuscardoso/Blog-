@@ -40,10 +40,9 @@ export class SignInService {
   
     return this.httpClient.get<any>(this.httpprotectedData, { headers }).pipe(
       tap(response => {
-        // Acessando o ID do perfil aninhado na resposta
-        const idPerfil = response.idprofile[0].idprofile; // Obtendo o ID do perfil
-        this.router.navigate([`/profileInfo/${idPerfil}`])
-        localStorage.setItem('idProfile', idPerfil)
+        const idProfile = response.idprofile[0].idprofile; 
+        this.router.navigate([`/profileInfo/${idProfile}`])
+        localStorage.setItem('idProfile', idProfile)
 
         return response
       })

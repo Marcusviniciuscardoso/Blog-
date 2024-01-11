@@ -16,10 +16,10 @@
         <div class="flex flex-col space-y-1 justify-center items-center -mt-12 w-full">
           <span class="text-xl whitespace-nowrap text-gray-50 font-semibold">{{profile.name}} {{profile.surname}}</span><span class="text-lg whitespace-nowrap text-gray-100"></span>
           <p class="text-md text-gray-200">
-            Data de nascimento: {{profile.dateofbirth}}
+            Date of Birth: {{profile.dateofbirth}}
           </p>
           <div class="py-2 flex space-x-2">
-            <button (click)="editProfile()" class="flex justify-center  max-h-max whitespace-nowrap focus:outline-none  focus:ring  focus:border-blue-300 rounded max-w-max border bg-transparent border-purple-400 text-purple-400 hover:border-purple-800 hover:border-purple-500 px-4 py-1 flex items-center hover:shadow-lg"><span class="mr-2"></span>Editar<span class="ml-2"></span></button>
+            <button (click)="editProfile()" class="flex justify-center  max-h-max whitespace-nowrap focus:outline-none  focus:ring  focus:border-blue-300 rounded max-w-max border bg-transparent border-purple-400 text-purple-400 hover:border-purple-800 hover:border-purple-500 px-4 py-1 flex items-center hover:shadow-lg"><span class="mr-2"></span>Edit<span class="ml-2"></span></button>
           </div>
           <p class="text-md text-gray-200">
             <button (click)="getHome()">Home</button>
@@ -36,7 +36,7 @@
   </div>
 </div>
 <div class="card-profile-container">
-<h2>Cards do perfil:</h2>
+<h2>Profile cards:</h2>
 <div class="card-profile-content">
  <div class="card-blog" *ngFor="let card of cards">
   <div *ngIf="card.profileid === localId" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">

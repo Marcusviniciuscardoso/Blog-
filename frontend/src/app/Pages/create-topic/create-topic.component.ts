@@ -77,6 +77,14 @@ export class CreateTopicComponent {
      this.imgIndex.push(this.imgCount)
     } 
 
+    auto_grow(event: Event): void {
+      const element = event.target as HTMLTextAreaElement;
+      if (element instanceof HTMLTextAreaElement) {
+        element.style.height = '5px';
+        element.style.height = (element.scrollHeight) + 'px';
+      }
+    }
+
     postCard(){
       const formData = new FormData();
       this.formdata.profileid = Number(localStorage.getItem('idProfile'))

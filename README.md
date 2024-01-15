@@ -3,7 +3,7 @@
  For 
 
 ## Built with
-<img src="https://logowik.com/content/uploads/images/angular9826.logowik.com.webp" alt="AngularJS" width="100" height="100"> [AngularJS](https://angular.io/)
+- [![AngularJS](https://angular.io/assets/images/logos/angular/angular.png)](https://angular.io/)
   - Framework para o Frontend
 
 ## Installation

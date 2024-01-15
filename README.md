@@ -1,4 +1,4 @@
-# BLOG
+**# BLOG
  This project has the intention to represent web blogs with features such as "signUp", "signIn", "editProfile", "CreateTopic" as a part of my learning of web development
  For 
 
@@ -24,7 +24,7 @@ As the first step, it is necessary to install the open source software NodeJS, p
    ```
 ## Backend
  ### Run the script
-  After installing NodeJS and Vscode, you must type "c" to run the backend script
+  After installing NodeJS and Vscode, you must type "npm run devStart" to run the backend script
   Make sure you are in the "blog-backend" folder on the integrated terminal
   ```bash
      npm run devStart
@@ -32,3 +32,4 @@ As the first step, it is necessary to install the open source software NodeJS, p
 ## Database  
  ### Run the script
    With postgreSQL or any database management system of your prefference, copy, paste and run the script saved in the "database" folder
+**

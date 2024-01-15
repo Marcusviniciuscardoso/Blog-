@@ -3,9 +3,8 @@
  For 
 
 ## Built with
-- [![AngularJS](https://logowik.com/content/uploads/images/angular9826.logowik.com.webp)](https://angular.io/)
+<img src="https://logowik.com/content/uploads/images/angular9826.logowik.com.webp" alt="AngularJS" width="100" height="100"> [AngularJS](https://angular.io/)
   - Framework para o Frontend
-  <img src="https://logowik.com/content/uploads/images/angular9826.logowik.com.webp" alt="AngularJS" width="100" height="100">
 
 ## Installation
 As the first step, it is necessary to install the open source software NodeJS, postgreSQL(optional) Data Base Management System and Vscode IDE to run the program

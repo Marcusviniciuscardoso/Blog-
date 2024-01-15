@@ -1,4 +1,4 @@
-**# BLOG
+** # BLOG
  This project has the intention to represent web blogs with features such as "signUp", "signIn", "editProfile", "CreateTopic" as a part of my learning of web development
  For 
 

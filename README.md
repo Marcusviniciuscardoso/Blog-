@@ -11,6 +11,9 @@ As the first step, it is necessary to install the open source software NodeJS, p
  ### Node_modules
    On the vscode integrated terminal you must type "npm install" to obtain all the dependencies needed to run the project
    It should be in the Frontend folder on the path in vscode integrated terminal
+   ```bash
+     npm install
+   ```
  ### Run the script
    On the frontend folder in the path, write "ng serve" to run
 

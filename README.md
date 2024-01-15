@@ -3,7 +3,7 @@
  For 
 
 ## Built with
-- [![AngularJS](https://www.google.com/url?sa=i&url=https%3A%2F%2Flogowik.com%2Fangular-logo-vector-1-51266.html&psig=AOvVaw2dilCpR7c9qZudW0K8ycpC&ust=1705438212457000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNi69smi4IMDFQAAAAAdAAAAABAQ)](https://angular.io/)
+- [![AngularJS](https://logowik.com/content/uploads/images/angular9826.logowik.com.webp)](https://angular.io/)
   - Framework para o Frontend
 
 ## Installation

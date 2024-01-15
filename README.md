@@ -19,12 +19,16 @@ As the first step, it is necessary to install the open source software NodeJS, p
    ```
  ### Run the script
    On the frontend folder in the path, write "ng serve" to run
-
+   ```bash
+     ng serve
+   ```
 ## Backend
  ### Run the script
-  After installing NodeJS and Vscode, you must type "npm run devStart" to run the backend script
+  After installing NodeJS and Vscode, you must type "c" to run the backend script
   Make sure you are in the "blog-backend" folder on the integrated terminal
-
+  ```bash
+     npm run devStart
+   ```
 ## Database  
  ### Run the script
    With postgreSQL or any database management system of your prefference, copy, paste and run the script saved in the "database" folder

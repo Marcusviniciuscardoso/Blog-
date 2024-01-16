@@ -24,7 +24,7 @@ As the first step, it is necessary to install the open source software NodeJS, p
      npm install -g @angular/cli
    ```
  ### Node_modules
-   On the VS Code integrated terminal you must type "npm install" to obtain all the dependencies needed to run the project
+   On the VS Code integrated terminal you must type "npm install" to obtain all the dependencies needed to run the project.
    It should be in the Frontend folder on the path in VS Code integrated terminal
    ```bash
      npm install

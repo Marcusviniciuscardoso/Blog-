@@ -12,7 +12,7 @@
   - CSS Framework
  
  - [![AngularJS](https://seeklogo.com/images/J/json-web-tokens-jwt-io-logo-C003DEC47A-seeklogo.com.png)](https://jwt.io/)
-  - open standard (RFC 7519)
+  - Open standard (RFC 7519)
 
 ## Installation
 As the first step, it is necessary to install the open source software NodeJS, postgreSQL(optional) Data Base Management System and Vscode IDE to run the program

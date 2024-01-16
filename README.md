@@ -36,7 +36,7 @@ As the first step, it is necessary to install the open source software NodeJS, p
    ```
 ## Getting Started: Backend
  ### Run the script
-  After installing NodeJS and VS Code, you must type "npm run devStart" to run the backend script
+  After installing NodeJS and VS Code, you must type "npm run devStart" to run the backend script.
   Make sure you are in the "blog-backend" folder on the integrated terminal
   ```bash
      npm run devStart

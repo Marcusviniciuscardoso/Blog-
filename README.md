@@ -41,6 +41,9 @@ As the first step, it is necessary to install the open source software NodeJS, p
   ```bash
      npm run devStart
    ```
+ ### .env.example
+  There is an archive called ".env.example" to show how the ."env" archive should be created
+  
 ## Getting Started: Database  
  ### Run the script
    With postgreSQL or any database management system of your prefference, copy, paste and run the script saved in the "database" folder

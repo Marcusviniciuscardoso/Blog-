@@ -1,5 +1,5 @@
 # BLOG
- This project has the intention to represent web blogs with features such as "signUp", "signIn", "editProfile", "CreateTopic" as a part of my learning of web development
+ This project has the intention to represent web blogs with features such as "signUp", "signIn", "editProfile", "CreateTopic" as a part of my learning and a better understanding of web development
 
 ## Built with
 - [![AngularJS](https://angular.io/assets/images/logos/angular/angular.png)](https://angular.io/)
@@ -15,17 +15,17 @@
   - Open standard (RFC 7519)
 
 ## Installation
-As the first step, it is necessary to install the open source software NodeJS, postgreSQL(optional) Data Base Management System and Vscode IDE to run the program
+As the first step, it is necessary to install the open source software NodeJS, postgreSQL(optional) Data Base Management System and VS Code IDE to run the program
 
 ## Getting Started: Frontend 
  ### Install angular command line
-   You must use the command "npm i @angular/cli" to install the cli tool for angular
+   You must use the command "npm install -g @angular/cli" to install the cli tool for angular
    ```bash
-     npm i @angular/cli
+     npm install -g @angular/cli
    ```
  ### Node_modules
-   On the vscode integrated terminal you must type "npm install" to obtain all the dependencies needed to run the project
-   It should be in the Frontend folder on the path in vscode integrated terminal
+   On the VS Code integrated terminal you must type "npm install" to obtain all the dependencies needed to run the project
+   It should be in the Frontend folder on the path in VS Code integrated terminal
    ```bash
      npm install
    ```
@@ -36,7 +36,7 @@ As the first step, it is necessary to install the open source software NodeJS, p
    ```
 ## Getting Started: Backend
  ### Run the script
-  After installing NodeJS and Vscode, you must type "npm run devStart" to run the backend script
+  After installing NodeJS and VS Code, you must type "npm run devStart" to run the backend script
   Make sure you are in the "blog-backend" folder on the integrated terminal
   ```bash
      npm run devStart

@@ -4,7 +4,16 @@
 
 ## Built with
 - [![AngularJS](https://angular.io/assets/images/logos/angular/angular.png)](https://angular.io/)
-  - Framework para o Frontend
+  - Framework to Frontend
+    
+- [![AngularJS](https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png)](https://expressjs.com/)
+  - Framework to Backend
+
+- [![AngularJS](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/320px-Tailwind_CSS_Logo.svg.png)](https://tailwindcss.com/)
+  - CSS Framework
+ 
+ - [![AngularJS](https://seeklogo.com/images/J/json-web-tokens-jwt-io-logo-C003DEC47A-seeklogo.com.png)](https://jwt.io/)
+  - open standard (RFC 7519)
 
 ## Installation
 As the first step, it is necessary to install the open source software NodeJS, postgreSQL(optional) Data Base Management System and Vscode IDE to run the program
